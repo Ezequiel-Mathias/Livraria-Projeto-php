@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Sniglet&display=swap');
+
+
+
+
+.divcardprodutos{
+    display: flex;
+    flex-direction: column;
+    background-color: #F1F1F1;
+    width: 350px;
+    height: 600px;
+    margin: auto;  
+    transition: all 1s; 
+    margin-bottom: 100px;
+    margin-right: 70px;
+}
+
+.divcardprodutos img{
+    height: 40vh;
+    border-radius: 10px;
+}
+
+
+.divcardprodutos:hover{ 
+    box-shadow: rgb(173 173 173) 0px 0px 10px 1px;
+    transition: box-shadow 0.6s;
+    transform: scale(1.0);
+}
+
+.cardsprodutos{
+    display: flex;
+    padding: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+   margin-left: 130px;
+   
+}

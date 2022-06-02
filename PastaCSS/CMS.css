@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#divmenucms{
+   width: 100%;
+   background-color: #868684;
+   height: 150px;
+   
+} 
+
+#divmenucms h1{
+ font-size: 40px;
+}
+
+#categoriascms{
+    width: 100%;
+    background-color: #a9a9aa;
+    height: 140px;
+  
+} 
+#opçoesdeescolha{
+    display: flex;
+    color: red;
+    
+}
+#opçoesdeescolha p {
+    margin-left: 59px;
+}
+#categoriascms img{
+    cursor: pointer;
+    margin-left: 100px;
+    margin-bottom: 10px;
+}
+
+#opçoesdeescolha #contatotxt{
+margin-left: 60px;
+margin-right: 30px;
+    
+}
+#conteudo{
+    width: 300px;
+    height: 100px;
+    margin-left: 200px;
+}
+#conteudo h1{
+    padding-top: 20px;
+}
+#nomedousuario{
+    padding-top: 5px;
+    margin-left: 100em;
+    margin-bottom:10px ;
+}
+#categoriascms #usuarioimg{
+    margin-right: 950px;
+}
+main h1{
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+
+
+
+

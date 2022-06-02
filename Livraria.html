@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="PastaCSS/style.css">
+    <link rel="stylesheet" href="PastaCSS/CardEmDestaque.css">
+    <link rel="stylesheet" href="PastaCSS/Modal.css">
+    <link rel="stylesheet" href="PastaCSS/CardsProdutos.css">
+    <link rel="stylesheet" href="PastaCSS/CardsPromoçoes.css">
+    <script src="PastaJS/EmDestaque.js" defer></script>
+    <script src="PastaJS/Produtos.js" defer></script>
+    <script src="PastaJS/Modal.js" defer></script>
+    <script src="PastaJS/Promoçoes.js" defer></script>
+    <title>Livraria Universal</title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+
+            <div id="divmenu">
+                <h2 id="nomedalivraria">Livraria Universal </h2>
+                <a href="" class="lupaimg"><img src="icones/lupa.png" alt=""></a>
+                <input type="search" name="caixadepesquisa" id="caixadepesquisa" placeholder="Pesquisar">
+            </div>
+
+            <!-- fiz uma ancora com o <a href=""></a> e o id, como o <a href=""></a> tem o mesmo nome
+            do id da section ja vai diretamente pra ela ! -->
+
+            <li><a href="#sessao1">Em Destaque</a></li>
+            <li><a href="#sessao2">Quem Somos ?</a></li>
+            <li><a href="#sessao3">Produtos em geral</a></li>
+            <li><a href="#sessao4">Promoções</a></li>
+            <li><a href="#sessao5">Contatos</a></li>
+               
+        </ul>
+    </nav>
+    <p id="sessao1">Ancora1</p>
+
+    <div class="linha1"></div>
+    <section>
+        <h1>Em destaque</h1>
+        <div class="linha2"></div>
+
+        <div class="cards"></div>
+
+        <div class="trocadecardsesquerdo" id="previous">
+            <img src="icones/lineblack1 2.png" alt="">
+        </div>
+
+
+        <div class="trocadecardsdireito" id="next">
+            <img src="icones/lineblack1 2.png" alt="">
+        </div>
+
+        <div class="modal-conteiner" id="modal-conteiner">
+            <div class="modal-content">
+               
+            </div>        
+        </div>
+
+    </section>
+
+    <p id="sessao2">Ancora2</p>
+
+    <div class="linha1"></div>
+    <section>
+        <h1>Quem Somos ?</h1>
+        <div class="linha2"></div>
+
+        <h1 id="tituloquemsomos">Com mais de 10 anos somos referencia no mercado !</h1>
+
+        <div id="sobrelivraria">
+            <p>&nbsp; A livraria universal trás preço de fabrica com a melhor qualidade dos produtos possivel, estamos a
+                mais de 10 anos no mercado com diferentes tipos de temas de livros para cada gosto especifico, temos
+                mais de 40 lojas fisicas conceituadas por todo o pais e agora com o nosso proprio site e-commerce. <br>
+                &nbsp; &nbsp; &nbsp;Entregamos no comforto da sua casa a nossa maior especialidade e com todo o carinho
+                do mundo, espero que goste e sempre volte aqui, muito obrigado por fazer a livraria universal possivel !
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat nostrum, dicta ratione iure sint
+                quisquam tempore, obcaecati nihil fugit molestiae voluptates bea</p>
+
+        </div>
+        <img class="imglivraria" src="imgs/image 26 (1).png" alt="">
+
+    </section>
+
+    <p id="sessao3">Ancora3</p>
+
+    <div class="linha1"></div>
+    <section class="sessaoprodutos">
+        <h1>Produtos</h1>
+        <div class="linha2" id="linha2produtos"></div>
+
+        <div class="cardsprodutos">
+
+        </div>
+
+    </section>
+
+    <p id="sessao4">Ancora4</p>
+
+    <div class="linha1"></div>
+    <section class="sessaopromoçoes">
+        <h1>Promoções</h1>
+        <div class="linha2"></div>
+
+        <div class="cardspromoçoes"></div>
+
+    </section>
+
+    <p id="sessao5">Ancora5</p>
+
+
+    <section id="rodape">
+        <form action="router.php?componente=contatos&action=inserir">
+            <div id="divrodapetitulo">
+                <h1 id="h1rodape">Alguma duvida? Dica construtiva? Ou reclamação? <br> Mande uma mensagem !<h1><input
+                type="text" name="caixaemail" id="caixaemail" placeholder="Cadastre seu E-mail">
+                <a href=""><img class="setaiconerodape" src="icones/simboloseta1.png" alt=""></a>
+            </div>
+            <h2 id="h2escrevaaqui">Escreva aqui ! </h2>
+            <h2 id="h2redessociais">Redes Sociais</h2>
+            <h2 id="h2contatos">Contatos</h2>
+            <div class="divpartedasmensagens">
+                <h3 id="txtnome">Nome:</h3> <input type="text" name="caixadepesquisa" id="caixanome"
+                    placeholder="Digite seu nome">
+                <textarea name="mensagemtext" id="mensagemtext" cols="30" rows="10"></textarea>
+                <a class="ahefbtnenviar" href="https://www.youtube.com/watch?v=_4MHuR3wp0g">
+                    <div class="botaoenviar">
+                        <h3>Enviar</h3>
+                    </div>
+                </a>
+            </div>
+        </form>
+
+        <div class="iconesredessociaisrodape">
+            <a class="imginstagram" href=""><img src="icones/iconeinstagram.png" alt=""></a>
+            <a href="imgfacebok"><img src="icones/iconefacebook.png" alt=""></a>
+            <a href="imgtwitter"><img src="icones/iconetwitter.png" alt=""></a>
+        </div>
+
+        <h3 id="formasdecontato">0800 889098 </h3>
+        <h3 id="formasdecontato">(11) 9191-8691 </h3>
+        <h3 id="formasdecontato">Livraria@gmail.com</h3>
+    </section>
+        <h3>Ezequiel Mathias &#169 2021</h3> 
+</body>
+
+</html>

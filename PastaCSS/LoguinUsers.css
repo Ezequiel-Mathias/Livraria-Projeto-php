@@ -1,0 +1,80 @@
+*{
+    padding: 0;
+    box-sizing:border-box ;
+    margin: 0;
+    }
+    
+    .div-autenticacao{
+    width: 100vw;
+    height: 100vh;
+    background:#6d6d6d;
+    padding-top: 17% ;
+    }
+    
+    #caixa-login{
+        margin: auto;
+        width: 550px;
+        height: 300px;
+        background-color: #009dac;
+        padding-top: 60px;   
+        padding-bottom: 80px;
+        padding-left: 60px ;
+        padding-right: 60px ;
+        flex-direction: row;
+       
+    }
+    
+    #caixa-login span{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 35px;
+        color: aliceblue;
+        font-size: 2rem;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin-bottom: 50px;
+    }
+    
+    
+    
+    #caixa-login h3{
+        position: absolute;
+        width: 2.5%;
+        height: 30px;
+        font-size: 1rem;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: #ffff;
+        
+    
+    }
+    
+    
+    
+    #senha,
+    #login{
+        width: 80%;
+        height: 30px;
+        width: 60%;
+        margin-bottom: 6px ;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        height: 20px;
+        margin-left: 60px;
+       
+    }
+    
+    
+    #submit-login{
+        margin-top: 10px;
+        margin-left: 160px;
+        font-size: 1.2rem;
+        width: 100px;
+        background-color: white;
+       
+    }
+    
+    #submit-login:hover{
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+    

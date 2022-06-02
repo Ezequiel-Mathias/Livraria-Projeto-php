@@ -1,0 +1,107 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+.cadastroEntradaDeDados{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    
+    left: 800px;
+    top: 300px;
+}
+
+#nomedoproduto{
+    position: absolute;
+    left: 680px;
+    top: 108px;
+}
+#caixadetexto{
+    margin-left: 790px;
+    margin-top: 108px;
+    height: 27px;
+    width: 405px;
+
+}
+
+#imgadd{
+    position: absolute;
+    top: 250px;
+    right: 830px;
+}
+#caixavalor{
+    position: absolute;
+    top: 504px;
+    right: 930px;
+    height: 22px;
+}
+
+#valordoproduto{
+    position: absolute;
+    top: 500px;
+    right: 1140px;
+}
+
+#destaquedoproduto{
+    position: absolute;
+    top: 560px;
+    right: 1110px;
+    
+}
+
+#radiosim{
+    position: absolute;
+    top: 573px;
+    right: 1040px;
+}
+
+#simradiotxt{
+    position: absolute;
+    top: 565px;
+    right: 1060px;
+    font-size: 20px;
+}
+#radionao{
+    position: absolute;
+    top: 573px;
+    right: 959px;
+    font-size: 20px;
+}
+#naoradiotxt{
+    position: absolute;
+    top: 567px;
+    right: 989px;
+    font-size: 20px;
+}
+#percentualdoproduto{
+    position: absolute;
+    top: 630px;
+    right: 930px;
+    
+}
+#caixapercentual{
+    position: absolute;
+    top: 635px;
+    right: 730px;
+
+}
+#descricaodoproduto{
+    position: absolute;
+    top: 705px;
+    right: 1110px;
+}
+#caixadescricao{
+    height: 200px;
+    position: absolute;
+    top: 700px;
+    right: 900px;
+    
+}
+
+
+
+
+

@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Sniglet&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.divcard{
+    display: flex;
+    flex-direction: column;
+    background-color: #F1F1F1;
+    width: 350px;
+    height: 600px;
+    padding: 8px;
+    margin: auto;  
+    transition: all 1s; 
+}
+.divcard:first-child{
+    margin-left: -126%;
+}
+.divcard img{
+    
+    height: 40vh;
+    border-radius: 10px;
+}
+.card-img-container{
+        height: 60%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 20px;
+        
+        
+    }
+    .card-image{
+        max-width: 100%;
+        max-height: 100%;
+    
+    }
+
+    .divcard:hover{
+        box-shadow: rgb(173 173 173) 0px 0px 10px 1px;
+        transition: box-shadow 0.6s;
+        transform: scale(1.1);
+    }
+    .card-descricao{
+        font-family: 'Sniglet', cursive;
+        font-size: 1rem;
+        font-weight: 500;
+        padding: 10px;
+    }
+    .card-avaliacao{
+        color: rgb(0, 0, 0);
+        font-size: 1.5rem;
+        padding-left: 10px;
+        padding-bottom: 7px;
+        
+    }
+    .card-preco{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding-left: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        
+    }
+    .cards{
+        display: flex;
+        padding: 10px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+       
+       
+    }
+    .card-nome{
+        font-size: 24px;
+        font-weight: 500;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 10px;
+    }
+
+    .card-parcelamento{
+        padding-left: 10px;
+        font-size: 1rem;
+    }
+    .trocadecardsesquerdo{
+        width: 65px;
+        height: 140px;
+        background-color: #DEDEDE;
+        position: absolute;
+        bottom: 21em;
+        left: 30px;
+        cursor: pointer;
+        transition: all 1s;
+        
+    }
+    .trocadecardsdireito{
+        width: 65px;
+        height: 140px;
+        background-color: #DEDEDE;
+        position: absolute;
+        bottom: 21em;
+        left: 113em;
+        cursor: pointer;
+        transition: all 1s;
+        
+    }
+
+    .trocadecardsdireito img{
+        margin-top: 50px;
+        margin-left: 10px;
+    }
+
+    .trocadecardsesquerdo img{
+        margin-top: 50px;
+        margin-left: 10px;
+        transform: rotate(180deg);
+    }
+    .trocadecardsdireito:hover{
+        transform: scale(1.1);
+    }
+    .trocadecardsesquerdo:hover{
+        transform: scale(1.1);
+    }
+
+   
+
+    #btndetalhes{
+        width: 93px;
+        height: 30px;
+        background-color: rgb(0, 0, 0);
+        color: white;
+        padding-left: 5px;
+        padding-top: 5px;
+        padding-bottom: 30px;
+        font-family: 'Sniglet', cursive;
+        font-size: 20px;
+        border-radius: 5px;
+        margin-left: 130px;
+        margin-top: 20px;
+        cursor: pointer;
+    }
+
+    #btndetalhes:hover{
+        transform: scale(1.1);
+    }
+    
+    
