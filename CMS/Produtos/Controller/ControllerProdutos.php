@@ -134,7 +134,6 @@ function excluirProduto($arrayDados){
                         "Valor" => $dadosprodutos['caixavalor'],
                         "destaque" => $checkbox,
                         "percentualdeDesconto" => $dadosprodutos['caixapercentual'],
-                        "valorComDesconto" => $dadosprodutos['caixavalor'],
                         "descricao" => $dadosprodutos['caixadescricao'],
                         "idCategorias" => $dadosprodutos['sltCategoria'],
                         "foto" => $nomeFoto

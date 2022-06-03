@@ -67,7 +67,7 @@ unset($_SESSION['dadosProdutos']);
           
         <select name="sltCategoria" id="raca">
         
-        <option value="">Selecione um item</option>
+        <option>Selecione um item</option>
        
                      <?php 
                         //import da controller de estados
@@ -79,7 +79,7 @@ unset($_SESSION['dadosProdutos']);
                         foreach ($listarcategorias as $categorias)
                               {
                         ?>
-                <option value="<?=$categorias['idCategorias']?>"><?=$categorias['nome']?></option>
+                <option  value="<?=$categorias['idCategorias']?>"><?=$categorias['nome']?></option>
                          <?php
                              }
                         ?>                             

@@ -10,7 +10,7 @@
     function uploadFile ($arrayFile)
     {
         //import do arquivo de configurações do projeto
-        require_once('modulo/config.php');
+        require_once('config.php');
 
         $arquivo = $arrayFile;
         $sizeFile = (int) 0;

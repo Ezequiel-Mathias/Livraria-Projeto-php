@@ -61,7 +61,6 @@ function insertProduto($dadosprodutos)
                  valor, 
                  destaque, 
                  percentualdedesconto, 
-                 valorComDesconto,
                  descricao,
                  foto,
                  idCategorias)
@@ -70,7 +69,6 @@ function insertProduto($dadosprodutos)
                 '".$dadosprodutos['Valor']."', 
                 '".$dadosprodutos['destaque']."', 
                 '".$dadosprodutos['percentualdeDesconto']."', 
-                '".$dadosprodutos['valorComDesconto']."',
                 '".$dadosprodutos['descricao']."',
                 '".$dadosprodutos['foto']."',
                 '".$dadosprodutos['idCategorias']."'
@@ -175,7 +173,6 @@ function listagem(){
             "Valor"  =>$rsdados['valor'],
             "Destaque"  =>$rsdados['destaque'],
             "PercentualdeDesconto"  =>$rsdados['percentualdedesconto'],
-            "ValorComDesconto"  =>$rsdados['valorComDesconto'],
             "Descricao"  =>$rsdados['descricao'],
             "idCategorias"  =>$rsdados['idCategorias'],
             "foto"  =>$rsdados['foto']
@@ -202,7 +199,6 @@ function listagem(){
          valor = '".$dadosprodutos['valor']."',
          destaque = '".$dadosprodutos['destaque']."',
          percentualdedesconto = '".$dadosprodutos['percentualdedesconto']."',
-         valorComDesconto = '".$dadosprodutos['valorComDesconto']."',
          descricao = '".$dadosprodutos['descricao']."',
          idCategorias = '".$dadosprodutos['idCategorias']."',
          foto = '".$dadosprodutos['foto']."'
