@@ -22,6 +22,12 @@ function conexaoMysql() {
         return false;    
  }
 
+ //Fecha a conexão com o BD Mysql
+ function fecharConexaoMysql($conexao)
+ {
+    mysqli_close($conexao);
+ }
+
 
 
 

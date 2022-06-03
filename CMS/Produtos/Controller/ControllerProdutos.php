@@ -88,13 +88,20 @@ function excluirProduto($arrayDados){
 
  function inserirProduto ($dadosprodutos, $file){
     $nomeFoto = (string) null;
-    
+    $checkbox = (int) 0;
+    if(!empty($produtos['checkprodutos'])){
+        $checkbox = $dadosprodutos['checkprodutos'];
+    }else{
+        $checkbox;
+      }
+
+
     //Validação para verificar se o objeto esta vazio
-    if(!empty($dadosprodutos))
+    if(!empty($dadosprodutos)){
 
         //Validação de caixa vazia dos elementos nome, celular e email, 
         //pois são obrigatórios no BD
-        if(!empty($dadosprodutos['caixapercentual']) && !empty($dadosprodutos['caixavalor']) && !empty($dadosprodutos['caixadetexto']) && !empty($dadosprodutos['caixadescricao']) && !empty($dadosprodutos['sltCategoria']))
+        if(!empty($dadosprodutos['caixapercentual']) && !empty($dadosprodutos['caixavalor']) && !empty($dadosprodutos['caixadetexto']) && !empty($dadosprodutos['caixadescricao']) && !empty($dadosprodutos['sltCategoria']) && $checkbox >= 0)
             {
                 //Validação para identificar se chegou um arquivo para upload
                 if ($file['fleFoto']['name'] != null)
@@ -125,7 +132,7 @@ function excluirProduto($arrayDados){
                     $arreyDados = array(
                         "Nome" => $dadosprodutos['caixadetexto'],
                         "Valor" => $dadosprodutos['caixavalor'],
-                        "destaque" => $dadosprodutos['rdocalc'],
+                        "destaque" => $checkbox,
                         "percentualdeDesconto" => $dadosprodutos['caixapercentual'],
                         "valorComDesconto" => $dadosprodutos['caixavalor'],
                         "descricao" => $dadosprodutos['caixadescricao'],
@@ -133,7 +140,9 @@ function excluirProduto($arrayDados){
                         "foto" => $nomeFoto
         
                          );
-
+                         
+                    
+                   
                 //import do arquivo de modelagem para manipular o BD
                 require_once('Model/Contato.php');
                 //Chama a função que fará o insert no BD (esta função esta na model)
@@ -148,6 +157,7 @@ function excluirProduto($arrayDados){
             return array('idErro'   => 2,
                          'message'  => 'Existem campos obrigatório que não foram preenchidos.');
     }
+}
 
 //Função para receber dados da View e encaminhar para a model (Atualizar)
 function atualizarProduto ($dadosContato, $arrayDados)

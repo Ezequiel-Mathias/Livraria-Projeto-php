@@ -7,22 +7,21 @@
      * Versão: 1.0
     ************************************************************************/
 
-        //import do arquivo de configuração do projeto
-        require_once('modulo/config.php');
 
 
         //Função para solicitar os dados da model e encaminhar a lista 
         //de estados para a View
-        function listarProdutos()
+        function listarCategorias()
         {
+            
             //import do arquivo que vai buscar os dados no DB
-            require_once('Model/Categorias.php');
+            require_once('Model/Contato.php');
             
             //chama a função que vai buscar os dados no BD
-            $dados = selectAllCategorias();
+            $categoria = selectAllCategorias();
 
-            if(!empty($dados))
-                return $dados;
+            if(!empty($categoria))
+                return $categoria;
             else
                 return false;
         }

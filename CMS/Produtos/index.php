@@ -52,15 +52,12 @@ unset($_SESSION['dadosProdutos']);
     
 
         <h2 id="valordoproduto">Valor:</h2>
-        <input type="number" name="'caixavalor'" id="caixavalor" value = "<?=isset($valor)?$valor:null?>">
+        <input type="number" name="caixavalor" id="caixavalor" value = "<?=isset($valor)?$valor:null?>">
             
         <h2 id="destaquedoproduto">Destaque:</h2> 
 
-        <input type="radio" name="rdocalc" id="radiosim" value="1">
+        <input type="checkbox" id="radiosim" value="true" name="checkprodutos">
           <p id="simradiotxt">Sim</p> 
-          
-          <input type="radio" name="rdocalc" id="radionao" value="" checked>
-          <p id="naoradiotxt">Não</p> 
           
           <h2 id="percentualdoproduto">Percentual de desconto:</h2> 
           <input type="number" name="caixapercentual" id="caixapercentual"  value="<?=isset($percentualdedesconto)?$percentualdedesconto:null?>">
@@ -76,13 +73,13 @@ unset($_SESSION['dadosProdutos']);
                         //import da controller de estados
                         require_once('Controller/ControllerCategorias.php');
                         //chama a função para carregar todos os estados do BD
-                        $listarprodutos = listarProdutos();
+                        $listarcategorias = listarCategorias();
                         
                                     
-                        foreach ($listarprodutos as $item)
+                        foreach ($listarcategorias as $categorias)
                               {
                         ?>
-                <option <?= $idcategoria==$item['idcategorias']?'selected':null ?> value="<?=$item['idcategorias']?>"><?=$item['nome']?></option>
+                <option value="<?=$categorias['idCategorias']?>"><?=$categorias['nome']?></option>
                          <?php
                              }
                         ?>                             

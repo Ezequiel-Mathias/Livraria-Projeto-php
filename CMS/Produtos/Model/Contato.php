@@ -3,6 +3,49 @@
 include('ConexaoMysql.php');
 
 
+//Função para listar todos as categorias do BD
+function selectAllCategorias()
+{
+    //Abre a conexão com o BD
+    $conexao = conexaoMysql();
+
+    //script para listar todos os dados do BD
+    $sql = "select * from tblcategorias order by nome asc";
+    
+    //Executa o scrip sql no BD e guarda o retorno dos dados, se houver
+    $result = mysqli_query($conexao, $sql);
+
+    //Valida se o BD retornou registros
+    if($result)
+    {
+        //mysqli_fetch_assoc() - permite converter os dados do BD 
+        //em um array para manipulação no PHP
+        //Nesta repetição estamos, convertendo os dados do BD em um array ($rsDados), além de
+        //o próprio while conseguir gerenciar a qtde de vezes que deverá ser feita a repetição
+        $cont = 0;
+        while ($rsDados = mysqli_fetch_assoc($result))
+        {
+            //Cria um array com os dados do BD
+            $arrayDados[$cont] = array (
+                "idcategorias"  =>  $rsDados['idcategorias'],
+                "nome"      =>  $rsDados['nome'],
+            );
+            $cont++;
+        }
+
+        //Solicta o fechamento da conexão com o BD
+       
+        fecharConexaoMysql($conexao);
+        
+        //select id from tblproduto order by id desc limit 1
+
+        return $arrayDados;
+    }
+
+}
+
+
+
 //Função para realizar o insert no BD
 function insertProduto($dadosprodutos)
 {
@@ -42,36 +85,13 @@ function insertProduto($dadosprodutos)
         if(mysqli_affected_rows($conexao))
             $statusResposta = true;
     }
-    
+
     return $statusResposta;
+    fecharConexaoMysql($conexao);
+    
+    
 
 }
-
-
-function listagemCategorias(){
-   $conetion = conexaoMysql();            //abrindo conexao com bds
-
-       // script paralistar todos os dados do BD, tbm serve para fazer em ordem decrecente (order by idcontato desc)
-       $slq = "select * from tblcategorias order by idcategorias desc" ;
-
-       $result = mysqli_query($conetion,$slq);
-        if($result){
-           $cont = 0;
-              while($rsdados = mysqli_fetch_assoc($result)){
-                      
-               $arreydados[$cont] = array(
-                  "idcategorias" =>$rsdados['idcategorias'],
-                  "Nome"  =>$rsdados['nome']
-               );
-               $cont++;
-            } 
-            
-            return $arreydados;
-        }
-
-    
-    }
-
 
 
 function listagem(){
@@ -100,9 +120,12 @@ function listagem(){
                 );
                 $cont++;
              } 
+
+             fecharConexaoMysql($conetion);
+
               if(isset($arreydados))
               return $arreydados;
-            else
+                else
                 return false;
              
          }
@@ -128,6 +151,8 @@ function listagem(){
          if(mysqli_affected_rows($conexao))
             $statusresposta = true;
         }
+
+        fecharConexaoMysql($conexao);
 
         return $statusresposta;
     }
@@ -157,6 +182,7 @@ function listagem(){
            );
         }
      
+        fecharConexaoMysql($conetion);
         return $arreydados;
      
         }
@@ -189,6 +215,7 @@ function listagem(){
       $statusResposta = true;
       }
      
+      fecharConexaoMysql($conexao);
        return $statusResposta;
         
     }
