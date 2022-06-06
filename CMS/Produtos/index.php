@@ -1,6 +1,11 @@
 <?php
 $form = (string) "Router.php?componente=contatos&action=inserir";
 
+
+$idcategoria = (string) null;
+
+$foto = (string) null;
+
 if(session_status()){
     //Valida se a variavel de sessão dadosContato
     //Não esta vazia
@@ -11,13 +16,12 @@ if(session_status()){
     $valor      =$_SESSION['dadosProdutos']['Valor'];
     $destaque      =$_SESSION['dadosProdutos']['Destaque'];
     $percentualdedesconto     =$_SESSION['dadosProdutos']['PercentualdeDesconto'];
-    $valorcomdestaque       =$_SESSION['dadosProdutos']['ValorComDesconto'];
     $descricao       =$_SESSION['dadosProdutos']['Descricao'];
     $idcategoria       =$_SESSION['dadosProdutos']['idCategorias'];
     $foto       =$_SESSION['dadosProdutos']['foto'];
 
 
-
+   
     //Mudamos a ação do form para edita o registro no click do botão salvar
 $form = "Router.php?componente=contatos&action=editar&idprodutos=".$idprodutos."&foto=".$foto;
 
@@ -56,7 +60,7 @@ unset($_SESSION['dadosProdutos']);
             
         <h2 id="destaquedoproduto">Destaque:</h2> 
 
-        <input type="checkbox" id="radiosim" value="true" name="checkprodutos">
+        <input type="checkbox" id="radiosim" value="1" name="checkprodutos">
           <p id="simradiotxt">Sim</p> 
           
           <h2 id="percentualdoproduto">Percentual de desconto:</h2> 
@@ -67,19 +71,20 @@ unset($_SESSION['dadosProdutos']);
           
         <select name="sltCategoria" id="raca">
         
-        <option>Selecione um item</option>
        
-                     <?php 
+       
+                      <?php 
                         //import da controller de estados
                         require_once('Controller/ControllerCategorias.php');
                         //chama a função para carregar todos os estados do BD
                         $listarcategorias = listarCategorias();
+                       
                         
                                     
                         foreach ($listarcategorias as $categorias)
                               {
                         ?>
-                <option  value="<?=$categorias['idCategorias']?>"><?=$categorias['nome']?></option>
+                <option <?=$idcategoria==$categorias['idcategorias']?'selected':null?> value="<?=$categorias['idCategorias']?>"><?=$categorias['nome']?></option>
                          <?php
                              }
                         ?>                             
@@ -128,7 +133,7 @@ unset($_SESSION['dadosProdutos']);
                    
                     <td class="tblColunas registros"><?=$item['Nome']?></td>
                     <td class="tblColunas registros"><?=$item['Valor']?></td>
-                    <td class="tblColunas registros"><?=$item['Destaque']?></td>
+                    <td class="tblColunas registros"><?= $item['Destaque'] == '0' ? $item['Destaque'] : 'Sim' ?: 'Não' ?></td>
                     <td class="tblColunas registros"><?=$item['PercentualdeDesconto']?></td>
                     <td class="tblColunas registros"><?=$item['ValorComDesconto']?></td>
                     <td class="tblColunas registros"><?=$item['Descricao']?></td>

@@ -1,6 +1,6 @@
 <?php
 
-include('ConexaoMysql.php');
+require_once('ConexaoMysql.php');
 
 
 //Função para listar todos as categorias do BD
@@ -74,7 +74,6 @@ function insertProduto($dadosprodutos)
                 '".$dadosprodutos['idCategorias']."'
             );";
 
-   
     //Executa o scriipt no BD
         //Validação para veririficar se o script sql esta correto
     if (mysqli_query($conexao, $sql))
@@ -85,7 +84,7 @@ function insertProduto($dadosprodutos)
     }
 
     return $statusResposta;
-    fecharConexaoMysql($conexao);
+   
     
     
 
@@ -165,7 +164,7 @@ function listagem(){
         $result = mysqli_query($conetion,$sql);
      
         if($result){
-     
+            
            if($rsdados = mysqli_fetch_assoc($result)){
            $arreydados = array(
             "idprodutos" =>$rsdados['idprodutos'],
@@ -177,12 +176,10 @@ function listagem(){
             "idCategorias"  =>$rsdados['idCategorias'],
             "foto"  =>$rsdados['foto']
            );
+        } 
         }
-     
-        fecharConexaoMysql($conetion);
+
         return $arreydados;
-     
-        }
      
      }
 

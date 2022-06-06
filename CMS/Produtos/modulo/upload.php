@@ -67,7 +67,7 @@
                         return $foto;
                     }else{
                         return array('idErro'   => 13,
-                             'message'  => 'Não foi possível mover o arquivo para o servidor');
+                             'message'  => 'Não foi possível moveaaaaaaaaaar o arquivo para o servidor');
                     }
 
 

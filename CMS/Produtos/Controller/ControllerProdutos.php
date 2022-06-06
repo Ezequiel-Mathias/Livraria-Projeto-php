@@ -89,7 +89,8 @@ function excluirProduto($arrayDados){
  function inserirProduto ($dadosprodutos, $file){
     $nomeFoto = (string) null;
     $checkbox = (int) 0;
-    if(!empty($produtos['checkprodutos'])){
+
+    if(!empty($dadosprodutos['checkprodutos'])){
         $checkbox = $dadosprodutos['checkprodutos'];
     }else{
         $checkbox;
@@ -103,6 +104,9 @@ function excluirProduto($arrayDados){
         //pois são obrigatórios no BD
         if(!empty($dadosprodutos['caixapercentual']) && !empty($dadosprodutos['caixavalor']) && !empty($dadosprodutos['caixadetexto']) && !empty($dadosprodutos['caixadescricao']) && !empty($dadosprodutos['sltCategoria']) && $checkbox >= 0)
             {
+
+               
+
                 //Validação para identificar se chegou um arquivo para upload
                 if ($file['fleFoto']['name'] != null)
                 {
@@ -119,7 +123,7 @@ function excluirProduto($arrayDados){
                         //a router e ela irá exibir a mensagem para o usuário
                         return $nomeFoto;
                     }
-
+                    
                 }
 
                 //uploadFile($dadosContato['fleFoto']);
@@ -140,19 +144,18 @@ function excluirProduto($arrayDados){
         
                          );
                          
-                    
+                         
                    
                 //import do arquivo de modelagem para manipular o BD
                 require_once('Model/Contato.php');
                 //Chama a função que fará o insert no BD (esta função esta na model)
-                if(insertProduto($arreyDados))
+                if(insertProduto($arreyDados)){
                     return true;
+                }
                 else
                     return array('idErro'  => 1, 
-                                 'message' => 'Não foi possivel inserir os dados no Banco de Dados');
-            }
-            
-        else
+                                 'message' => 'Não foi possivel ihhhhhhhhhhhhnserir os dados no Banco de Dados');
+            }else
             return array('idErro'   => 2,
                          'message'  => 'Existem campos obrigatório que não foram preenchidos.');
     }
